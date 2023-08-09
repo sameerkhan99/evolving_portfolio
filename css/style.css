@@ -56,7 +56,7 @@ nav {
   flex-wrap: wrap;
 }
 
-nav {
+nav a {
   text-decoration: none;
   padding: 5px 10px;
   color: var(--secondary);
@@ -135,4 +135,136 @@ main {
   border-right: 4px solid var(--primary);
   font-size: 4vw;
   line-height: 1.1;
+}
+
+.page-section > div {
+  flex: 0 0 77%;
+}
+
+.page-section > p {
+  margin-bottom: 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  border: 5px solid var(--secondary);
+  background-color: var(--primary);
+  color: var(--tertiary);
+  min-height: 150px;
+  max-height: 150px;
+  flex-basis: calc(50% 1em);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 20px 0;
+  margin: 0.5em;
+  text-decoration: none;
+}
+
+.flex-item:first-child {
+  min-height: 400px;
+  flex-basis: 100%;
+}
+
+.flex-item:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+.flex-item div {
+  background-color: var(--secondary);
+}
+
+.flex-item h3 {
+  font-size: 1.6em;
+}
+
+.contact address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.contact address a:hover {
+  background-size: 100% 88%;
+  color: var(--secondary);
+} 
+
+.body {
+  background-image: url(../images/02-run-buddy.jpg);
+}
+
+.calculator {
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+
+.surf {
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+
+.led {
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+
+.puzzle {
+  background-image: url(../images/02-hero-bg.jpg);
+}
+
+@media screen and (max-width: 1000px){
+  header {
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  header h1 {
+    width: 100%;
+    padding: 5%;
+    margin-bottom: 10px;
+    font-size: 10vw;
+  }
+
+  header nav {
+    justify-content: center;
+  }
+
+  .page-section > h2,
+  .page-section > div {
+    flex: 0 0 100%;
+  }
+
+  .page-section > h2 {
+    border-right: none;
+    border-bottom: 4px solid var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 7vw;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .flex-item,
+  .flex-item:first-child {
+    flex-basis: 100%;
+  }
+
+  .flex-item:first-child {
+    min-height: 150px;
+  }
+
+  .hero-banner {
+    justify-content: center;
+    align-content: center;
+  }
+
+  .conact address {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
